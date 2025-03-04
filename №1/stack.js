@@ -8,6 +8,13 @@ class StackReal {
     constructor() {
         this.items = [];
     }
+    // Функція для перегляду даних стеку
+    ShowStack() {
+        console.log("Книги:");
+        for (var dog = this.items.length - 1; dog >= 0; dog--) {
+            console.log(`${this.items.length - dog}."${this.items[dog].title}", кількість сторінок: ${this.items[dog].numberofpages};`);
+        }
+    }
     // Функція для додавання нової книги у стек
     addToStack(book) {
         this.items.push(book);
@@ -19,13 +26,6 @@ class StackReal {
         }
         const removedBook = this.items.pop();
         return `Книга "${removedBook.title}" була видалена зі списку`;
-    }
-    // Функція для перегляду даних стеку
-    ShowStack() {
-        console.log("Книги:");
-        this.items.forEach((book, index) => {
-            console.log(`${index + 1}."${book.title}", кількість сторінок: ${book.numberofpages};`);
-        });
     }
     // Функція для визначення кількості книг у стеку
     getnumberofbooks() {
@@ -54,7 +54,7 @@ function main() {
     stack.addToStack(new Book("Економіка", 169));
     // Перегляд даних стеку
     stack.ShowStack();
-    // Визначаємо кількість книг у стеку
+     // Визначаємо кількість книг у стеку
     var numberofbooks = stack.getnumberofbooks();
     console.log(`Кількість книг у списку: ${numberofbooks}`);
     //Тестуємо видалення книг зі стека
