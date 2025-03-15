@@ -30,7 +30,7 @@ class SingleLinkedList {
     }
 
   //Нам необхідно додати всі елементи, які менші/рівні 15 і поділити на їх кількість; a - це сума елементів, b - їхня кількість
-    calculateAverage(value) {
+    calculateAverage() {
       let a = 0, b = 0;
       let current = this.head;
       while (current) {
@@ -43,7 +43,7 @@ class SingleLinkedList {
       return b > 0 ? a / b : 0;
     }
   
-    removeFromList(value) {
+    removeFromList() {
       while (this.head && this.head.value > 25) {
         this.head = this.head.next;
       }
@@ -71,7 +71,7 @@ class SingleLinkedList {
   
   function main() {
     const list = new SingleLinkedList();
-    let inputData = [-8, 15.4, 9, 11, 78.57, -4, 201];
+    let inputData = [26, 26, 26, -8, 15.4, 9, 11, 78.57, -4, 201];
     inputData.forEach(i => list.addToList(i));
     console.log("Початковий список елементів:", list.printList());
     console.log("Середнє значення елементів, які мають значення менше або дорівнює 15:", list.calculateAverage());
