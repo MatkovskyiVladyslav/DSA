@@ -1,4 +1,4 @@
-var a = 5, b = 7;
+var a = 6, b = 7;
 function strategy_1(a, b, x) {
     if (x >= -1 && x < 3){
             return Math.sin(x);
@@ -16,4 +16,4 @@ function strategy_1(a, b, x) {
         console.log('Функція невизначена');
     }
 }
-console.log(strategy_1(a, b, 4));
+console.log(strategy_1(a, b, 3));
